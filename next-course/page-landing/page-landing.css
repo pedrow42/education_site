@@ -113,6 +113,6 @@ a.give-classes:hover{
     .total-conections{
         grid-area: texting;
         justify-self: end;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
