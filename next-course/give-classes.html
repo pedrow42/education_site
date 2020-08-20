@@ -6,6 +6,7 @@
     <title>proffy | sua plataforma</title>
     <link rel="stylesheet" href="/next-course/styles/style.css">
     <link rel="stylesheet" href="/next-course/styles/header.css">
+    <link rel="stylesheet" href="/next-course/styles/forms.css">
     <link rel="stylesheet" href="/next-course/styles/page-give-classes.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
@@ -27,9 +28,29 @@
             </div>
         </header>
 
-
         <main>
-            
+            <form action="" id="create-class">
+                <fieldset>
+                    <legend>Seus dados</legend>
+                    <div class="input-block">
+                        <label for="name">Nome completo</label>
+                        <input type="name" id="name" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="avatar">Link da sua foto <small>(comece com http://)</small></label>
+                        <input name="avatar" id="avatar" type="url" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="whatsapp">Whatsapp <small>(somente números)</small></label>
+                        <input name="whatsapp" id="whatsapp" type="number" required>
+                    </div>
+                    <div class="textarea-block">
+                        <label for="bio">Biografia</label>
+                        <textarea name="bio" id="bio" required></textarea>
+                    </div>
+                    
+                </fieldset>
+            </form>
         </main>
         
     </div>
