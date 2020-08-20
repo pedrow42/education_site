@@ -70,9 +70,14 @@
                             <option value="10">Química</option>
                         </select>
                     </div>
+
+                    <div class="input-block">
+                        <label for="cost">Custo da sua aula/hora <small>(R$)</small></label>
+                        <input type="cost" id="cost" type="number" required>
+                    </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset id="schedule-items">
                     <legend>Horários disponíveis
                         <button id="add-time">+ Novo horário</button>
                     </legend>
@@ -103,12 +108,13 @@
                             <input type="time" name="time_to[]" required>
                         </div>
                     </div>
+
                 </fieldset>
             </form>
 
             <footer>
                 <p>
-                    <img src="/next-course/icons/warning.svg" alt="Aviso importante"> <br> Preencha todos os dados
+                    <img src="/next-course/icons/warning.svg" alt="Aviso importante">Importante!<br>Preencha todos os dados
                 </p>
                 <button type="submit" form="create-class">Salvar cadastro</button>
             </footer>
