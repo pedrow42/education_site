@@ -3,6 +3,7 @@ document.querySelector('#add-time')
 //quando clicar no botão...
 .addEventListener('click', cloneField)
 //...vai executar uma ação:
+var cont = 0
 
 function cloneField(){
     //duplicar os campos...
@@ -14,6 +15,8 @@ function cloneField(){
         //pega o field do momento e limpa ele...
         field.value = ""
     })
+    cont+=1
+    console.log(cont)
 
     document.querySelector('#schedule-items').appendChild(newFieldContainer)
 }
