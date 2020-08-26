@@ -3,6 +3,7 @@ document.querySelector('#add-time')
 //quando clicar no botão...
 .addEventListener('click', cloneField)
 //...vai executar uma ação:
+
 function cloneField(){
     //duplicar os campos...
     const newFieldContainer = document.querySelector('.schedule-item').cloneNode(true) //bolean: true or false
@@ -13,5 +14,6 @@ function cloneField(){
         //pega o field do momento e limpa ele...
         field.value = ""
     })
+
     document.querySelector('#schedule-items').appendChild(newFieldContainer)
 }
