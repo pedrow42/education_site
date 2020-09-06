@@ -29,8 +29,9 @@ Database.then(async(db) => {
     ]
 
     //funçao deverá aguardar, entao:
-    //await createProffy(db, {proffyValue, classValue, classScheduleValues}) //pode ser usado o await ou o then()
-
+    //await createProffy(db, {proffyValue, classValue, classScheduleValues}) 
+    
+    //pode ser usado o await ou o then()
     const selectedProffys = await db.all("SELECT * FROM proffys")
 
     //consultar as classes de um determinado professor
