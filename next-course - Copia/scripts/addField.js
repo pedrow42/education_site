@@ -1,17 +1,32 @@
-//procurar o botão
-document.querySelector('#add-time')
-//quando clicar no botão...
-.addEventListener('click', cloneField)
-//...vai executar uma ação:
-function cloneField(){
-    //duplicar os campos...
-    const newFieldContainer = document.querySelector('.schedule-item').cloneNode(true) //bolean: true or false
-    //...pegar os campos
-    const fields = newFieldContainer.querySelectorAll('input')
-    //para cada campo, limpar...
-    fields.forEach(function(field){
-        //pega o field do momento e limpa ele...
-        field.value = ""
-    })
-    document.querySelector('#schedule-items').appendChild(newFieldContainer)
-}
+$(document).ready(function(){
+
+    // Add new element
+    $(".add-time").click(function(){
+    
+    // last <div> with element class id
+    var lastid = $(".schedule-item:last").attr("id");
+    var split_id = lastid.split("_");
+    var nextindex = Number(split_id[1]) + 1;
+
+    
+    // Adding new div container after last occurance of element class
+    $(".schedule-item:last").after("<div class='schedule-item' id='div_"+ nextindex +"'></div>");
+
+    // Adding element to <div>
+    $("#div_" + nextindex).append("<input type='text' id='div_"+ nextindex +"'</input><button id='remove_" + nextindex + "' class='remove'>X</button>");
+
+
+});
+
+// Remove element
+$('#schedule-items').on('click','.remove',function(){
+
+ var id = this.id;
+ var split_id = id.split("_");
+ var deleteindex = split_id[1];
+
+ // Remove <div> with id
+ $("#div_" + deleteindex).remove();
+
+}); 
+});
