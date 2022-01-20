@@ -1,6 +1,4 @@
-<h1 align="center">
-    <img src="public/proffy.PNG">
-</h1>
+# Proffy
 
 <h1>
     <img src="public/proffy.gif">
